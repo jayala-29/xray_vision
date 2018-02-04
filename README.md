@@ -1,6 +1,6 @@
 https://raw.githubusercontent.com/TriviTran/Drone-Motion/master/README.md
 
-# Drone Motion 
+# Xray Vision
 [FINAL DEMO VIDEO](https://drive.google.com/file/d/0B00v03a6GBTtNVVmVGY4d3RTaVk/view?usp=sharing)
 #
 [FINAL REPORT](https://github.com/TriviTran/Drone-Motion/blob/master/presentations/Final_Report_145.pdf)
@@ -31,10 +31,13 @@ Optimizing the flight motion.
 #
 
 ![TeamImage](https://github.com/TriviTran/Drone-Motion/blob/master/extra/TeamImg.png?raw=true)
-  - Hakan Erol - herol@ucsd.edu
-  - Joji Asako - jasako@ucsd.edu
-  - Soheil Karimi - skarimik@ucsd.edu
-  - TriVi Tran - t1tran@ucsd.edu 
+  - Jessy Ayala
+  - Xiangyu B
+  - Nelson Ho 
+  - Trevor McCleery 
+  - Vincent Tierra 
+  - Canzhen Zhou
+
 
 
 
