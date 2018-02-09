@@ -1,6 +1,6 @@
 # Xray Vision
 
-https://raw.githubusercontent.com/TriviTran/Drone-Motion/master/README.md
+<!-- https://raw.githubusercontent.com/TriviTran/Drone-Motion/master/README.md --->
 
 ![N|Solid](https://github.com/jayala-29/xray_vision/blob/master/xraypic1.png)
 
