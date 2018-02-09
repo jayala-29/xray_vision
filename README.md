@@ -21,11 +21,8 @@ Augmented Reality (AR) presents many opportunities for advancement in the medica
   
 # Technology Used
 
-
-
-
-# Milestones and Deliverables
-
 ## RealSense Camera
 
 Intel® RealSense™ technology supports a wide range of operating systems and programming languages. The Intel® RealSense™ SDK enables you to extract depth data from the camera and use the interpretation of this data in the platform of your choice. Developer tools will be available in Windows* OS, Linux*, Mac* OS, and more.
+
+# Milestones and Deliverables
