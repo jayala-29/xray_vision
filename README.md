@@ -27,6 +27,7 @@ Intel® RealSense™ technology supports a wide range of operating systems and p
 
 # Milestones and Deliverables
 
+<!--
 Jessy Ayala
 Get Realsense camera to work with hardware provided: 
 Status: Completed -- 26 January 2018
@@ -65,7 +66,6 @@ Complete by: Feb 1, 2018
 Modify global registration code to output a single result for global registration, as well as a list of point correspondences relating input points to points in the global model. 
 Status: Jan 26, 2018
 Write scripts to relate points in global registration to the point in the original mesh.
- 	
 Work on MICCAI paper. 
 Status Feb 23, 2018
 Trevor McCleery
@@ -77,14 +77,10 @@ Deliverable: A document containing step-by-step instructions of the data collect
 Record porcine liver on site at the Center for the Future of Surgery (CFS)
 Status: completed 7 February 2017
 Deliverable: A set of 13 recordings of the porcine liver with various lighting configurations. On the day of the recording, Michael, Trevor, and Vincent traveled to the CFS and performed a series of recordings on a living pig. The pig was sedated, and prepared for operation by the medical staff. Between surgeries, we were able to perform our recordings using the surgical lighting provided in the operating room. The lighting was adjustable by angle and position, but not by intensity. Therefore, the various lighting conditions we could provide were always full intensity, which sometimes created shadows when not pointing directly at the subject. 
-
 Looking forward, I will be focusing my efforts on two primary tasks:
 Perform a secondary recording at the CFS. Using feedback from the segmentation/registration team and familiarity with the equipment and venue, a valuable set of second recordings can be obtained. If I do this, give me an B.
 Make improvements to the Python recording script by added command line options that will allow the user to adjust camera parameters by passing an argument at the command line. If I do this, give me a A.
 Improving the quality of the scans. Some recordings showed noise and distortion when viewed off axis. This could be due to the camera’s settings, of which the documentation is not readily accessible. It may be that the camera cannot provide the quality of data required. If so, we intend to determine that definitively. 
-
-
-
 Vincent Tierra
 Create an instruction manual for the recording apparatus for the data collection: 
 Status: In progress - Due date February 15, 2018
@@ -95,12 +91,9 @@ Status: Completed February 7, 2018
 Deliverable: A recording of the pig’s liver at the CFS with various angles and lighting. 
 Google drive link to the recordings:
 https://drive.google.com/drive/folders/1-OOP0Wo8JggQuUAvSluBppixM2xEYloo?usp=sharing (must have a ucsd email to view it)
-
 Since we have done the first recording of the pig’s liver at the surgery site, the next step in this project is to improve the quality of the scans, currently there are still some noise in the recordings. This could be due to a variety of different things; the camera settings, lighting, or the camera itself. We definitely want to conduct a 2nd recording, however, this part might be tricky because setting up an appointment (schedule) at CFS is challenging but if we manage to get another appointment and do a second set of recordings with valuable data, I would like to get a B. We will try to mimic the light intensity of the surgical lights and try different camera settings to see if we can get a better recording. To get an A in this class we will work on the UI on the script for the realsense camera to make it more robust and versatile by having the option to pass in the parameters in the command line to change the camera settings, and document this step, and also by completing milestone 1 & 2.
-
 Xiangyu Bi
 Objective: Finishing the technical programming and debugging part of computer vision algorithm validation and optimization. The current benchmarks are broken or might not be applied to our liver dataset. We need to modify or rewrite some parts of the codes to make it work on the surgical dataset collected by other teammates.
-
 Schedule:
 Theoretical preparation for the project, including ICP algorithm, non-rigid global registration algorithm etc. Go over the segmentation code and global registration benchmark. 
 Status: Completed 17 January 2018	
@@ -115,9 +108,7 @@ Status:  In progress
 	      Details about working with surgical liver data.
 Segmented the red liver portion from the scan. The surgical data we collected last week is, on the intuition, not ready for segmentation and registration, since the liver part we need to use is comparatively small in the whole scan. We need to write scripts to cut the valid part and mitigate the noise.  Since scans are taken with fixed camera angle, so we can use geometric features to extract liver points roughly. With proper x, y and z coordinate threshold the entire liver part can be segmented. However, the segmented part shown in meshlab is somewhat darker than the original one. We think it should be caused by some display problems, which we need to figure out.
 Deliverable: The liver scan we got and some attempts to cut it off.
-
 4. Improve the performance of the algorithm, to make the result of liver dataset better. March 6, 2018
-
 Milestone -B
 Going over current benchmark.
 Fix some bugs in segmentation and registration work. Up to now the segmentation code is much better than the former broken one. It means to get a B I only to find some possible functional flaws in the registration code and repair to make the workflow run.
@@ -128,7 +119,6 @@ For global registration. We cannot run it perfectly for any dataset right now. W
 Milestone -A+
 Finish Milestone A
 Do some optimization about the algorithm to improve the performance, such as we can add more features for the points, like colors. However the current benchmarks are packaged and all information about color is not saved, there is a long way to go to achieve this.
-
 Canzhen Zhou
 Set up the environment. January 16, 2018
 Run through the segmentation code with the test image. January 31, 2018
@@ -137,17 +127,13 @@ Run through the segmentation code with collected liver image. February 15, 2018
 Run through the registration code with collected liver image.  February 25, 2018
 Fix the possible bugs. March 5, 2018
 Improve the registration code with more dimensions, for example, adding colors. March 10, 2018
-
 Requirement of Grade
 If I do milestone 4 I get B+, if I do milestone 5 I get A, and if I do milestone 6 or 7, I get A+.
-
 Update of Milestone
 I change the order of the task. Previous order is running through all the segmentation code part and then run the registration part. However, we went through the segmentation code quicker then we expect, the liver image data went a little slower. So we move on to the next stage of running registration code with the test image.
 So I switch the “run through segmentation code with liver image” with “run through registration code with test image”.
-
 Completed
 Created a our own development server, equip the server with the environment of running C code.
-
 a snapchat of server environment that is able to 
 run the script of segmentation and global registration
 Completed
@@ -165,7 +151,6 @@ make
 the executable sparseicp should be created in the build directory
 Run the script to segment all image
 ./sparseicp --source <pre-segmented tool (.obj) from first scan in sequence> --scan-dir <directory of scans to be segmented ordered alphanumerically> --result-dir <output directory>
-
 Revise the milestone with “Walking through the process of global registration code”
 The steps of running through the global registration code are as follows:
 Include following directories in your path:
@@ -174,3 +159,4 @@ Include following directories in your path:
 Place ply’s for nonrigid alignment in the nonrigid/ directory
 Place ply’s for rigid alignment in the rigid/ directory
 Run the run.sh script
+-->
