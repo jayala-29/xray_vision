@@ -21,6 +21,18 @@ For a ground truth dataset, like the one we are proposing, to be effective and u
 
 We have never recorded liver data with a Realsense camera before. We have never used a Realsense camera before. We do not know if the collected data will be too noisy for the current algorithms we have. We do not know if the collected data will be of high enough resolution for our current workflow. We don’t know that our segmentation and global registration workflow will work well for all types of collected data (for example, angle of the camera, location of the liver, whether the liver is dissected out or still in the host, etc).
 
+# Details of Development
+
+During practice runs of the data collection where we scanned store-bought liver, we realized that there is a lot of noise with the realsense camera because of the light refracting across the surface. We experimented with a variety of camera angles and determined that it was best to position the camera at a normal to the scan target. This reduced the amount of surface refraction and reduced the noise in the collected mesh. 
+
+In practice, when we went to the Center for the Future of Surgery, this technique worked out quite well. The quality of the scan surface was consistent and there were few holes in the collected point cloud. The surface is a little bit noisy in terms of depth, but we are hoping some post-processing can rectify this.
+
+In terms of segmenting the newly collected dataset, we did not need to use the segmentation codebase that was developed earlier this quarter. Because the scanner was oriented at a fixed angle and location, and the line of sight of the scanner was in the same axis as the normal, only a plane cut was necessary to properly segment the collected data. The portion below the area of interest was segmented with a plane cut in the Z axis, and thrown away. Because the tool was positioned just above the area of interest, a plane cut just above the area of interest was also enough to segment the tool from the nonrigid liver. This technique worked for this particular dataset, but is not guaranteed to work with other datasets we might collect later this quarter.
+
+The global registration workflow failed to generate a global model with the dataset collected. The reason it failed is likely because the dataset is a point cloud and the registration code expects a mesh. However, because of the noise in the surface of the liver, automated reconstruction may not produce desirable results. We are currently still looking for solutions to this problem.
+
+In the meantime, development for the global registration flow is being done with previously captured data, using a scanner with higher resolution and accuracy. Scripts are being developed so that, given a feature in the global registration result, we can find the vertices that correspond to the feature in the source mesh frames. Tools for identifying points and features in the opposite direction - from an individual frame to the global model - are also being developed. Because there is varying precision in the points output from the registration as compared to the original mesh, identifying points is not as easy as originally thought.
+
 # Group Members
 
   - Nelson Ho 
