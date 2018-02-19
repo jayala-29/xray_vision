@@ -50,6 +50,16 @@ In the meantime, development for the global registration flow is being done with
 
 Intel® RealSense™ technology supports a wide range of operating systems and programming languages. The Intel® RealSense™ SDK enables you to extract depth data from the camera and use the interpretation of this data in the platform of your choice. Developer tools will be available in Windows* OS, Linux*, Mac* OS, and more.
 
+## NextEngine 3D Laser Scanner
+
+Software to Scan, Align, Polish, and Fuse 3D Models. High performance 3D viewer.
+Scan inside SolidWorks (Office Premium 2007+). Accelerate design of complex parts.
+SolidWorks + NextEngine co-developed native format. No import or export needed.
+ScanStudio works outside SolidWorks for creation of standard format scan output files.
+Scans can be output as STL, OBJ, VRML, XYZ, and PLY files.
+20MB for typical models, based on 10 facet scans.
+Assemble views into a model conveniently with built-in Smart Alignment and trim tools.
+
 <!--
 # Milestones and Deliverables
 Jessy Ayala
